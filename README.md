@@ -23,7 +23,7 @@
 
 1. **Clone repository**
    ```bash
-   git clone [<url-repo-của-bạn>](https://github.com/vamcrizer/docker-learn)
+   git clone https://github.com/vamcrizer/docker-learn
    cd fastapi
    ```
 
