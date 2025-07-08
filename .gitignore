@@ -182,13 +182,16 @@ Thumbs.db
 # Docker
 .dockerignore
 
-# Application specific
+# Application specific  
 /data/*
 !/data/.gitkeep
 /static/uploads/*
 !/static/uploads/.gitkeep
+/static/temp/*
 logs/
 temp/
+
+# Remove this line: static
 
 # FastAPI specific
 .pytest_cache/
