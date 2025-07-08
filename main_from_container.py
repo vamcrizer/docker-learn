@@ -10,7 +10,7 @@ import os
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="IEC API",
+    title="DOCKER API",
     description="FastAPI with JWT Authentication + Test Interface",
     version="1.0.0"
 )

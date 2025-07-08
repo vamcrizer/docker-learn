@@ -5,7 +5,6 @@ import hashlib
 def init_database():
     """Khởi tạo database và tạo user mẫu"""
     
-    # Tạo tất cả bảng
     print("🔧 Creating database tables...")
     Base.metadata.create_all(bind=engine)
     
@@ -13,15 +12,13 @@ def init_database():
     db = SessionLocal()
     
     try:
-        # Tạo các user mẫu
         sample_users = [
-            {"email": "alice@pion.tech", "password": "123456"},
-            {"email": "bob@pion.tech", "password": "password"},
-            {"email": "admin@pion.tech", "password": "admin123"}
+            {"email": "alice@test.tech", "password": "123456"},
+            {"email": "bob@test.tech", "password": "password"},
+            {"email": "admin@test.tech", "password": "admin123"}
         ]
         
         for user_data in sample_users:
-            # Check user đã tồn tại chưa
             existing = db.query(User).filter(User.email == user_data["email"]).first()
             
             if not existing:
